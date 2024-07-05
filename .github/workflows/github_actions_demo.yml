@@ -16,8 +16,4 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: Bot
-        uses: JoseThen/comment-pr@v1.2.0
-        with:
-          comment: "Bot Test ${{secrets.GITHUB_TOKEN}}"
           

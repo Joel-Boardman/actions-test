@@ -2,6 +2,11 @@ name: "Test pull request"
 on: 
     pull_request: 
         types: [opened, reopened, synchronize]
+
+permissions:
+    pull-requests: write
+    contents: read # This is required for actions/checkout
+    checks: read
 jobs:
     check-infa:
         runs-on: ubuntu-latest
@@ -12,5 +17,5 @@ jobs:
             - name: Bot
               uses: JoseThen/comment-pr@v1.2.0
               with:
-                comment: "Bot Test ${{secrets.GITHUB_TOKEN}}"
+                comment: "Bot Test"
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

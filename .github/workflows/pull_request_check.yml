@@ -1,0 +1,10 @@
+name: "Test pull request"
+
+on: 
+    pull_request: 
+        types: [opened, reopened, synchronize]
+
+jobs:
+    check-infa:
+        name: temp
+        runs-on: ubuntu-latest

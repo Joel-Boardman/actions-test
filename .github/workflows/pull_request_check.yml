@@ -8,3 +8,5 @@ jobs:
     check-infa:
         name: temp
         runs-on: ubuntu-latest
+        steps:
+            - run: echo "Hello world!"

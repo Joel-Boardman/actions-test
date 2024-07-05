@@ -17,5 +17,5 @@ jobs:
             - name: Bot
               uses: JoseThen/comment-pr@v1.2.0
               with:
-                comment: "Bot Test ${{secrets.GITHUB_TOKEN}}"
+                comment: "Bot Test"
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

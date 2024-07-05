@@ -1,12 +1,16 @@
 name: "Test pull request"
-
 on: 
     pull_request: 
         types: [opened, reopened, synchronize]
-
 jobs:
     check-infa:
-        name: temp
         runs-on: ubuntu-latest
         steps:
-            - run: echo "Hello world!"
+            - name: job test
+              run: echo "Hello world!"
+
+            - name: Bot
+              uses: JoseThen/comment-pr@v1.2.0
+              with:
+                comment: "Bot Test ${{secrets.GITHUB_TOKEN}}"
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
